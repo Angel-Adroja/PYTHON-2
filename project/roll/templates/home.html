@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>My roll no is 10 </h3>
+<h3>Student Page </h3>
+
+<form >      
+        <input type="textbox" name="" />
+       <input type=”submit” name= “”>
+</form>
+<h3>Show Data </h3>
+<table >
+            <tr>
+                <th> ID </th>
+                <th> StuId </th>
+                <th> Name </th>
+                <th> Email </th>
+                <th> Result </th>
+            </tr>
+            {%for s in students %}
+            <tr>
+                <td> {{s.id}} </td>
+                <td> {{s.stuid}} </td>
+                <td> {{s.name}} </td>
+                <td> {{s.email}}</td>
+                <td> {{s.result}} </td>
+                <td><button type='submit'><a href="#">Information</a>
+                </button></td>
+            </tr>
+            {% endfor %}
+{% endblock content %}
