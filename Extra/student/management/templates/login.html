@@ -1,0 +1,9 @@
+<h1>login</h1>
+<form method='post'>
+    {% csrf_token %}
+    {% if error %}
+        {{ error }}
+    {% endif %}  <!-- Yahan par space hata kar 'endif' kar diya hai -->
+    {{ form.as_p }}
+    <button type='submit'>Login</button>
+</form>
